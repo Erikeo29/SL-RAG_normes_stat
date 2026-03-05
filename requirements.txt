@@ -1,0 +1,11 @@
+streamlit==1.42.0
+langchain-community==0.4.1
+langchain-text-splitters==1.1.1
+chromadb==1.1.0
+pypdf==6.7.0
+groq==1.0.0
+pandas==2.3.2
+onnxruntime==1.23.0
+tokenizers==0.22.1
+streamlit-authenticator>=0.3.0
+PyYAML>=6.0
