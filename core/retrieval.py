@@ -37,7 +37,7 @@ def retrieve_relevant_chunks(
 
     chunks = []
     for i, doc in enumerate(results["documents"][0]):
-        meta = results["metadatas"][0][i]
+        meta = results["metadatas"][0][i] or {}
         distance = results["distances"][0][i]
         chunks.append(
             {
