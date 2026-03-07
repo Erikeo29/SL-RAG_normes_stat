@@ -47,7 +47,7 @@ def stream_rag_response(
 
     client = get_groq_client()
     if not client:
-        yield "Cle API Groq non configuree.", chunks
+        yield "Clé API Groq non configurée.", chunks
         return
 
     messages = [{"role": "system", "content": SYSTEM_PROMPT}]

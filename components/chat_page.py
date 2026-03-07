@@ -26,10 +26,12 @@ def render_chat_page():
         for i, msg in enumerate(st.session_state.chat_messages):
             with st.chat_message(msg["role"]):
                 st.markdown(msg["content"])
-                if msg["role"] == "assistant" and i < len(st.session_state.chat_sources):
-                    sources = st.session_state.chat_sources[i]
-                    if sources:
-                        _render_sources(sources)
+                if msg["role"] == "assistant":
+                    st.caption(t("ai_disclaimer"))
+                    if i < len(st.session_state.chat_sources):
+                        sources = st.session_state.chat_sources[i]
+                        if sources:
+                            _render_sources(sources)
 
         if prompt := st.chat_input(t("chat_placeholder")):
             st.session_state.chat_messages.append({"role": "user", "content": prompt})
@@ -55,6 +57,7 @@ def render_chat_page():
                         yield text_chunk
 
                 st.write_stream(response_generator())
+                st.caption(t("ai_disclaimer"))
 
                 if source_chunks:
                     _render_sources(source_chunks)

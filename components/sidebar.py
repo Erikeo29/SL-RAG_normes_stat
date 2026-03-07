@@ -14,7 +14,7 @@ def render_sidebar():
         st.markdown("---")
 
         # Langue
-        lang_options = {"Francais": "fr", "English": "en"}
+        lang_options = {"Français": "fr", "English": "en"}
         current_lang = st.session_state.get("lang", "fr")
         default_idx = 0 if current_lang == "fr" else 1
         selected = st.radio(
