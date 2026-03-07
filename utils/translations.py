@@ -62,17 +62,21 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     },
     "version_info": {
         "fr": (
-            "**Version 1.0.0** — Mars 2026\n\n"
-            "**App dediee normes statistiques**\n"
+            "**Version 1.0.0** — Janv 2026\n\n"
+            "**Nouveautes :**\n"
             "- Base vectorielle pre-indexee\n"
             "- Synchronisation depuis dossier"
         ),
         "en": (
-            "**Version 1.0.0** — Mar 2026\n\n"
-            "**Dedicated statistical standards app**\n"
+            "**Version 1.0.0** — Jan 2026\n\n"
+            "**New features:**\n"
             "- Pre-indexed vector store\n"
             "- Directory sync"
         ),
+    },
+    "upload_locked_hint": {
+        "fr": "Reserve a l'administrateur",
+        "en": "Administrator only",
     },
     # --- Upload page ---
     "upload_title": {
@@ -80,8 +84,8 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "en": "Upload PDF documents",
     },
     "upload_help": {
-        "fr": "Glissez vos fichiers PDF ici (ISO, ASTM, JCGM, NIST...)",
-        "en": "Drop your PDF files here (ISO, ASTM, JCGM, NIST...)",
+        "fr": "Glissez vos fichiers PDF ici (JCGM, NIST, documents publics...)",
+        "en": "Drop your PDF files here (JCGM, NIST, public documents...)",
     },
     "upload_domain_hint": {
         "fr": "Les documents seront indexes dans le domaine **normes statistiques**.",
@@ -133,21 +137,21 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     },
     # --- Chat page ---
     "chat_placeholder": {
-        "fr": "Posez une question sur les normes statistiques...",
-        "en": "Ask a question about statistical standards...",
+        "fr": "Posez une question sur l'incertitude de mesure, la metrologie...",
+        "en": "Ask a question about measurement uncertainty, metrology...",
     },
     "chat_welcome": {
         "fr": (
             "Posez une question sur les documents statistiques charges. Exemples :\n"
-            "- Quel est le plan d'echantillonnage pour un NQA de 1.0 selon l'ISO 2859-1 ?\n"
-            "- Comment calculer les limites de controle d'une carte X-barre ?\n"
-            "- Quels sont les indices de capabilite Cp et Cpk selon l'ISO 22514 ?"
+            "- Comment evaluer l'incertitude de type A et de type B selon le GUM ?\n"
+            "- Quelle est la methode de propagation des incertitudes (loi de propagation) ?\n"
+            "- Que recommande le NIST TN 1297 pour l'expression de l'incertitude ?"
         ),
         "en": (
             "Ask a question about the uploaded statistical documents. Examples:\n"
-            "- What is the sampling plan for an AQL of 1.0 per ISO 2859-1?\n"
-            "- How to compute control limits for an X-bar chart?\n"
-            "- What are the Cp and Cpk capability indices per ISO 22514?"
+            "- How to evaluate Type A and Type B uncertainty per the GUM?\n"
+            "- What is the uncertainty propagation method (law of propagation)?\n"
+            "- What does NIST TN 1297 recommend for expressing uncertainty?"
         ),
     },
     "chat_clear": {
@@ -240,8 +244,8 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "en": "Search in indexed documents",
     },
     "matrix_search_placeholder": {
-        "fr": "ex: plan d'echantillonnage, NQA, carte de controle, capabilite...",
-        "en": "e.g.: sampling plan, AQL, control chart, capability...",
+        "fr": "ex: incertitude de mesure, propagation, GUM, type A, type B...",
+        "en": "e.g.: measurement uncertainty, propagation, GUM, type A, type B...",
     },
     "matrix_search_label": {
         "fr": "Rechercher dans les documents charges",
@@ -262,14 +266,16 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     # --- About page ---
     "about_domain_statistique_desc": {
         "fr": (
-            "Normes statistiques industrielles : echantillonnage (ISO 2859, ISO 3951), "
-            "cartes de controle SPC (ISO 7870), capabilite des procedes (ISO 22514), "
-            "interpretation statistique des donnees (ISO 16269)."
+            "Normes statistiques industrielles et metrologie : incertitude de mesure "
+            "(GUM — JCGM 100:2008), metrologie statistique (NIST SP 260-135), "
+            "expression de l'incertitude (NIST TN 1297). La page de synthese couvre "
+            "egalement les normes ISO/ASTM (echantillonnage, SPC, capabilite)."
         ),
         "en": (
-            "Industrial statistical standards: sampling (ISO 2859, ISO 3951), "
-            "SPC control charts (ISO 7870), process capability (ISO 22514), "
-            "statistical interpretation of data (ISO 16269)."
+            "Industrial statistical standards and metrology: measurement uncertainty "
+            "(GUM — JCGM 100:2008), statistical metrology (NIST SP 260-135), "
+            "expression of uncertainty (NIST TN 1297). The overview page also covers "
+            "ISO/ASTM standards (sampling, SPC, capability)."
         ),
     },
 }

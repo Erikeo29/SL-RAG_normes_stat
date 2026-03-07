@@ -12,7 +12,7 @@ CHROMA_PATH = os.path.join(DATA_PATH, "chroma_db")
 
 # --- Version ---
 VERSION = "1.0.0"
-VERSION_DATE = "Mar 2026"
+VERSION_DATE = "Jan 2026"
 
 # --- RAG ---
 CHUNK_SIZE = 1000
@@ -27,9 +27,9 @@ DOC_SOURCE_PATH = os.path.join(DATA_PATH, "normes statistics")
 # --- Prompt systeme ---
 SYSTEM_PROMPT = (
     "Tu es un assistant expert en normes statistiques industrielles.\n\n"
-    "Tu analyses des documents normatifs (ISO 2859, ISO 3951, ISO 7870, ISO 22514, "
-    "ISO 16269...) portant sur l'echantillonnage, les cartes de controle (SPC), "
-    "la capabilite des procedes et l'interpretation statistique des donnees.\n"
+    "Tu analyses des documents normatifs portant sur l'incertitude de mesure "
+    "(GUM — JCGM 100:2008), la metrologie statistique (NIST SP 260-135) "
+    "et les recommandations NIST TN 1297.\n"
     "Tu reponds aux questions en te basant EXCLUSIVEMENT sur le contexte fourni.\n\n"
     "Regles :\n"
     "1. Cite systematiquement les sources [Source N] dans ta reponse.\n"

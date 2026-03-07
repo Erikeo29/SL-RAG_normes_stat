@@ -28,6 +28,14 @@ def _render_fr(stats: dict):
         "en langage naturel sur les documents charges."
     )
 
+    st.warning(
+        "**Prototype** — Cette application est un outil exploratoire. Les normes "
+        "indexees sont des documents publics dont l'actualite et l'exactitude doivent "
+        "etre verifiees avant toute utilisation. L'assistant IA est un guide : il peut "
+        "commettre des erreurs ou des omissions. Pour toute decision, referez-vous "
+        "systematiquement aux textes normatifs officiels dans leur version en vigueur."
+    )
+
     st.markdown("---")
 
     st.subheader("Domaine couvert")
@@ -41,9 +49,6 @@ def _render_fr(stats: dict):
         "- **Chat RAG** : posez des questions en langage naturel, obtenez des reponses "
         "avec references aux documents sources\n"
         "- **Synthese des normes** : vue d'ensemble structuree des normes statistiques\n"
-        "- **Gestion des documents** : upload, indexation et suppression de PDFs\n"
-        "- **Matrice de compliance** : evaluez la conformite par referentiel "
-        "ISO avec recherche RAG integree\n"
         "- **Bilingue** : francais et anglais"
     )
 
@@ -51,10 +56,10 @@ def _render_fr(stats: dict):
 
     st.subheader("Cas d'usage")
     st.markdown(
-        "- Retrouver un plan d'echantillonnage (NQA, taille de lot) dans l'ISO 2859\n"
-        "- Identifier les formules de cartes de controle (X-barre, R, p, c) de l'ISO 7870\n"
-        "- Consulter les indices de capabilite (Cp, Cpk, Pp, Ppk) de l'ISO 22514\n"
-        "- Comprendre les methodes d'incertitude de mesure (GUM, NIST)"
+        "- Comprendre les methodes d'evaluation de l'incertitude de mesure (GUM)\n"
+        "- Consulter les recommandations NIST sur l'incertitude et la metrologie\n"
+        "- Explorer les concepts statistiques fondamentaux (intervalles, propagation)\n"
+        "- Parcourir la synthese des normes statistiques industrielles (ISO, ASTM)"
     )
 
     st.markdown("---")
@@ -85,18 +90,9 @@ def _render_fr(stats: dict):
 
     st.markdown("---")
 
-    st.subheader("Documents actuellement indexes")
-    if stats["sources"]:
-        for src in stats["sources"]:
-            st.markdown(f"- {src}")
-        st.caption(f"{stats['documents']} documents, {stats['chunks']} chunks")
-    else:
-        st.caption("Aucun document indexe.")
-
-    st.markdown("---")
-
     st.caption(
-        "Note : les documents charges dans ce RAG sont des documents publics et gratuits."
+        "Les documents charges dans ce RAG sont des documents publics et gratuits "
+        "(JCGM/BIPM, NIST)."
     )
 
 
@@ -108,6 +104,13 @@ def _render_en(stats: dict):
         "This application is an **intelligent assistant** for analyzing industrial "
         "statistical standards. It uses **RAG** (Retrieval-Augmented Generation) "
         "technology to allow natural language questions on uploaded documents."
+    )
+
+    st.warning(
+        "**Prototype** — This application is an exploratory tool. The indexed standards "
+        "are public documents whose currency and accuracy must be verified before any "
+        "use. The AI assistant is a guide: it may produce errors or omissions. For any "
+        "decision, always refer to the official normative texts in their current version."
     )
 
     st.markdown("---")
@@ -122,9 +125,6 @@ def _render_en(stats: dict):
     st.markdown(
         "- **RAG Chat**: ask natural language questions, get answers with source references\n"
         "- **Standards overview**: structured summary of statistical standards\n"
-        "- **Document management**: upload, index and delete PDFs\n"
-        "- **Compliance matrix**: assess conformity by ISO standard "
-        "with integrated RAG search\n"
         "- **Bilingual**: French and English"
     )
 
@@ -132,10 +132,10 @@ def _render_en(stats: dict):
 
     st.subheader("Use cases")
     st.markdown(
-        "- Find a sampling plan (AQL, lot size) in ISO 2859\n"
-        "- Identify control chart formulas (X-bar, R, p, c) from ISO 7870\n"
-        "- Look up capability indices (Cp, Cpk, Pp, Ppk) from ISO 22514\n"
-        "- Understand measurement uncertainty methods (GUM, NIST)"
+        "- Understand measurement uncertainty evaluation methods (GUM)\n"
+        "- Consult NIST recommendations on uncertainty and metrology\n"
+        "- Explore fundamental statistical concepts (intervals, propagation)\n"
+        "- Browse the overview of industrial statistical standards (ISO, ASTM)"
     )
 
     st.markdown("---")
@@ -166,16 +166,7 @@ def _render_en(stats: dict):
 
     st.markdown("---")
 
-    st.subheader("Currently indexed documents")
-    if stats["sources"]:
-        for src in stats["sources"]:
-            st.markdown(f"- {src}")
-        st.caption(f"{stats['documents']} documents, {stats['chunks']} chunks")
-    else:
-        st.caption("No documents indexed.")
-
-    st.markdown("---")
-
     st.caption(
-        "Note: all documents loaded in this RAG are free, publicly available documents."
+        "All documents loaded in this RAG are free, publicly available documents "
+        "(JCGM/BIPM, NIST)."
     )

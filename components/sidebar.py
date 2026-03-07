@@ -63,7 +63,7 @@ def render_sidebar():
 
         st.markdown("---")
 
-        # Stats base
+        # Stats base + documents indexes
         stats = get_db_stats(collection_name=COLLECTION_NAME)
         st.caption(t("db_stats_title"))
         st.caption(f"{stats['documents']} docs · {stats['chunks']} chunks")
@@ -72,21 +72,14 @@ def render_sidebar():
             if stats["sources"]:
                 for src in stats["sources"]:
                     st.caption(f"- {src}")
-
-        st.markdown("---")
-
-        # Annexes
-        with st.expander(t("annexes_title")):
-            if st.button(
-                t("page_upload"), key="btn_upload", use_container_width=True
-            ):
-                st.session_state.current_page = "upload"
-                st.rerun()
-            if st.button(
-                t("page_matrix"), key="btn_matrix", use_container_width=True
-            ):
-                st.session_state.current_page = "matrix"
-                st.rerun()
+            st.markdown("---")
+            st.button(
+                t("page_upload"),
+                key="btn_upload",
+                use_container_width=True,
+                disabled=True,
+                help=t("upload_locked_hint"),
+            )
 
         st.markdown("---")
 
