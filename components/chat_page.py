@@ -79,7 +79,7 @@ def _render_sources(chunks: list[dict]):
                 f"<strong>[{i}] {chunk['source']}</strong> — "
                 f"{t('sources_page')} {chunk['page'] + 1} "
                 f"({t('sources_relevance')} : {similarity:.0%})<br>"
-                f"<em>{chunk['text'][:200]}...</em>"
+                f"<em>{(chunk.get('text') or '')[:200]}...</em>"
                 f"</div>",
                 unsafe_allow_html=True,
             )
