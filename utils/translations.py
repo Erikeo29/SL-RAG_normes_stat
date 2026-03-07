@@ -4,8 +4,8 @@ import streamlit as st
 TRANSLATIONS: dict[str, dict[str, str]] = {
     # --- App ---
     "app_title": {
-        "fr": "Normes statistiques",
-        "en": "Statistical Standards",
+        "fr": "RAG Normes statistiques",
+        "en": "RAG Statistical Standards",
     },
     "app_subtitle": {
         "fr": "Assistant intelligent pour l'analyse de normes statistiques",
