@@ -34,9 +34,9 @@ def _translate_query_to_en(query: str, client: Groq | None) -> str | None:
                 {
                     "role": "system",
                     "content": (
-                        "Translate the following query to English. "
-                        "Return ONLY the translation, nothing else. "
-                        "If already in English, return it as-is."
+                        "You are a translator. Translate the user message "
+                        "from French to English. Output ONLY the English "
+                        "translation, nothing else."
                     ),
                 },
                 {"role": "user", "content": query},
