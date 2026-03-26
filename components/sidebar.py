@@ -87,6 +87,6 @@ def render_sidebar():
         st.markdown(t("version_info"))
         st.markdown("")
         st.markdown(
-            "© 2025 Eric QUEAU — "
+            "© 2025 Eric QUEAU - "
             "[MIT License](https://opensource.org/licenses/MIT)"
         )

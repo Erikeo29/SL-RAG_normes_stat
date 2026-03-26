@@ -6,24 +6,24 @@ This document serves as a reference course on the main statistical standards use
 
 ## Table of contents
 
-1. [Introduction — role of statistics in industrial quality](#1-introduction--role-of-statistics-in-industrial-quality)
+1. [Introduction - role of statistics in industrial quality](#1-introduction--role-of-statistics-in-industrial-quality)
 2. [Sampling by attributes (ISO 2859)](#2-sampling-by-attributes-iso-2859)
 3. [Sampling by variables (ISO 3951)](#3-sampling-by-variables-iso-3951)
 4. [SPC control charts (ISO 7870, ASTM E2587)](#4-spc-control-charts-iso-7870-astm-e2587)
 5. [Process capability (ISO 22514)](#5-process-capability-iso-22514)
 6. [Measurement system capability (ISO 22514-7)](#6-measurement-system-capability-iso-22514-7)
 7. [Normality tests (ISO 5479)](#7-normality-tests-iso-5479)
-8. [Comparison of populations — tests and ANOVA (ISO 5725, ASTM E691)](#8-comparison-of-populations--tests-and-anova-iso-5725-astm-e691)
+8. [Comparison of populations - tests and ANOVA (ISO 5725, ASTM E691)](#8-comparison-of-populations--tests-and-anova-iso-5725-astm-e691)
 9. [Outlier detection (ISO 16269-4)](#9-outlier-detection-iso-16269-4)
 10. [Statistical tolerance intervals (ISO 16269-6)](#10-statistical-tolerance-intervals-iso-16269-6)
 11. [Measurement uncertainty (GUM, NIST)](#11-measurement-uncertainty-gum-nist)
-12. [SPC guide (ISO 11462) — implementation steps](#12-spc-guide-iso-11462--implementation-steps)
+12. [SPC guide (ISO 11462) - implementation steps](#12-spc-guide-iso-11462--implementation-steps)
 13. [Summary and interconnections](#13-summary-and-interconnections)
 14. [Open source documents indexed in the RAG](#14-open-source-documents-indexed-in-the-rag)
 
 ---
 
-## 1. Introduction — role of statistics in industrial quality
+## 1. Introduction - role of statistics in industrial quality
 
 ### 1.1 Why statistics in production
 
@@ -82,7 +82,7 @@ In addition to these ISO standards, there are the GUM (JCGM 100:2008) for measur
 
 Sampling by attributes consists of classifying sample units as conforming or nonconforming (binary criterion). The decision is based on the number of nonconforming items found.
 
-### 2.1 ISO 2859-1 — plans indexed by AQL
+### 2.1 ISO 2859-1 - plans indexed by AQL
 
 ISO 2859-1 (equivalent to ANSI/ASQ Z1.4) defines sampling plans indexed by AQL. The procedure is: (1) determine the letter code from the lot size and inspection level, (2) read the sample size $n$ and $Ac$/$Re$ numbers from the table for the chosen AQL.
 
@@ -114,7 +114,7 @@ $$P_a(p) \approx \sum_{i=0}^{Ac} \frac{(np)^i}{i!} e^{-np}$$
 
 <!-- IMG:oc_curve_sampling.png -->
 
-### 2.3 ISO 2859-2 — plans for isolated lots (LQ)
+### 2.3 ISO 2859-2 - plans for isolated lots (LQ)
 
 For isolated lots, ISO 2859-2 provides plans indexed by the limiting quality (LQ), corresponding to $P_a = 0.10$.
 
@@ -126,7 +126,7 @@ For isolated lots, ISO 2859-2 provides plans indexed by the limiting quality (LQ
 
 Sampling by variables uses the numerical measured value on each unit, allowing better discrimination with a smaller sample. **Fundamental assumption:** the distribution of the characteristic is approximately normal.
 
-### 3.1 ISO 3951-1 — s and $\sigma$ methods
+### 3.1 ISO 3951-1 - s and $\sigma$ methods
 
 **"s" method (unknown standard deviation):**
 
@@ -407,11 +407,11 @@ Interpretation: linear alignment = normality; S-shaped curvature = skewness; dev
 
 ---
 
-## 8. Comparison of populations — tests and ANOVA (ISO 5725, ASTM E691)
+## 8. Comparison of populations - tests and ANOVA (ISO 5725, ASTM E691)
 
 > **Note:** ISO 5725 and ASTM E691 standards are not indexed in the RAG (paid standards).
 
-### 8.1 Student's t-test — comparing means
+### 8.1 Student's t-test - comparing means
 
 #### 8.1.1 One-sample
 
@@ -435,7 +435,7 @@ When in doubt about equal variances, use Welch's test.
 
 $$t = \frac{\bar{d}}{s_d / \sqrt{n}} \qquad \nu = n - 1$$
 
-### 8.2 Fisher's F-test — comparing two variances
+### 8.2 Fisher's F-test - comparing two variances
 
 $$F = \frac{s_1^2}{s_2^2} \quad (s_1^2 \geq s_2^2)$$
 
@@ -482,7 +482,7 @@ The decomposition includes $SS_A$, $SS_B$, $SS_{AB}$, and $SS_E$. If the interac
 
 **Levene:** replaces each observation by $z_{ij} = |x_{ij} - \tilde{x}_j|$ (group median), then performs ANOVA on $z_{ij}$. Robust to non-normal data.
 
-### 8.7 Non-parametric alternative — Kruskal-Wallis
+### 8.7 Non-parametric alternative - Kruskal-Wallis
 
 $$H = \frac{12}{N(N+1)} \sum_{j=1}^{k} \frac{R_j^2}{n_j} - 3(N+1)$$
 
@@ -490,11 +490,11 @@ Under $H_0$, $H \sim \chi^2(k-1)$ for $n_j \geq 5$.
 
 ### 8.8 ISO 5725 and ASTM E691
 
-**ISO 5725 — accuracy (trueness and precision):**
+**ISO 5725 - accuracy (trueness and precision):**
 - Repeatability: $r = 2.8 \times s_r$
 - Reproducibility: $R = 2.8 \times s_R$ with $s_R^2 = s_r^2 + s_L^2$
 
-**ASTM E691 — Mandel statistics:**
+**ASTM E691 - Mandel statistics:**
 - $h_j = (\bar{x}_j - \bar{\bar{x}})/s_{\bar{x}}$ (between-laboratory consistency)
 - $k_j = s_j/s_r$ (within-laboratory consistency)
 
@@ -624,7 +624,7 @@ The factor $k = 2$ is most common ($\approx 95\%$).
 
 **Expression of the result:** $Y = y \pm U \quad (k = 2)$
 
-### 11.6 Uncertainty budget — example
+### 11.6 Uncertainty budget - example
 
 | Source | Type | Distribution | Value | Divisor | $u_i$ |
 |---|---|---|---|---|---|
@@ -653,7 +653,7 @@ If $\nu_{eff} < 30$, adjust $k$ using the Student's t-distribution (e.g., $k = 2
 
 ---
 
-## 12. SPC guide (ISO 11462) — implementation steps
+## 12. SPC guide (ISO 11462) - implementation steps
 
 > **Note:** ISO 11462 is not indexed in the RAG (paid standard).
 
@@ -692,9 +692,9 @@ The following documents are freely available and indexed in the RAG statistical 
 
 | Reference | Title |
 |---|---|
-| **JCGM 100:2008 (GUM)** | Evaluation of measurement data — Guide to the expression of uncertainty in measurement (English version). |
-| **JCGM 100:2008 (GUM)** | Evaluation des donnees de mesure — Guide pour l'expression de l'incertitude de mesure (French version). |
-| **NIST SP 260-135** | Statistical methods for the certification of reference materials — Statistics in metrology. |
+| **JCGM 100:2008 (GUM)** | Evaluation of measurement data - Guide to the expression of uncertainty in measurement (English version). |
+| **JCGM 100:2008 (GUM)** | Evaluation des donnees de mesure - Guide pour l'expression de l'incertitude de mesure (French version). |
+| **NIST SP 260-135** | Statistical methods for the certification of reference materials - Statistics in metrology. |
 | **NIST TN 1297** | Guidelines for Evaluating and Expressing the Uncertainty of NIST Measurement Results. |
 
 ---

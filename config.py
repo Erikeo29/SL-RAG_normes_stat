@@ -1,4 +1,4 @@
-"""Configuration globale — RAG normes statistiques."""
+"""Configuration globale - RAG normes statistiques."""
 import os
 
 # --- Chemins ---
@@ -28,7 +28,7 @@ DOC_SOURCE_PATH = os.path.join(DATA_PATH, "normes statistics")
 SYSTEM_PROMPT = (
     "Tu es un assistant expert en normes statistiques industrielles.\n\n"
     "Tu analyses des documents normatifs portant sur l'incertitude de mesure "
-    "(GUM — JCGM 100:2008), la métrologie statistique (NIST SP 260-135) "
+    "(GUM - JCGM 100:2008), la métrologie statistique (NIST SP 260-135) "
     "et les recommandations NIST TN 1297.\n"
     "Tu réponds aux questions en te basant EXCLUSIVEMENT sur le contexte fourni.\n\n"
     "Règles :\n"

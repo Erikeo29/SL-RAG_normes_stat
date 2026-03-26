@@ -1,4 +1,4 @@
-"""Systeme de traduction bilingue FR/EN — Normes statistiques."""
+"""Systeme de traduction bilingue FR/EN - Normes statistiques."""
 import streamlit as st
 
 TRANSLATIONS: dict[str, dict[str, str]] = {
@@ -62,13 +62,13 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     },
     "version_info": {
         "fr": (
-            "**Version 1.0.0** — Janv 2026\n\n"
+            "**Version 1.0.0** - Janv 2026\n\n"
             "**Nouveautés :**\n"
             "- Base vectorielle pré-indexée\n"
             "- Synchronisation depuis dossier"
         ),
         "en": (
-            "**Version 1.0.0** — Jan 2026\n\n"
+            "**Version 1.0.0** - Jan 2026\n\n"
             "**New features:**\n"
             "- Pre-indexed vector store\n"
             "- Directory sync"
@@ -168,11 +168,11 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     },
     "ai_disclaimer": {
         "fr": (
-            "⚠️ Réponse générée par IA — peut contenir des erreurs ou omissions. "
+            "⚠️ Réponse générée par IA - peut contenir des erreurs ou omissions. "
             "Vérifiez toujours les informations auprès des textes normatifs officiels."
         ),
         "en": (
-            "⚠️ AI-generated response — may contain errors or omissions. "
+            "⚠️ AI-generated response - may contain errors or omissions. "
             "Always verify information against the official normative texts."
         ),
     },
@@ -277,13 +277,13 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
     "about_domain_statistique_desc": {
         "fr": (
             "Normes statistiques industrielles et métrologie : incertitude de mesure "
-            "(GUM — JCGM 100:2008), métrologie statistique (NIST SP 260-135), "
+            "(GUM - JCGM 100:2008), métrologie statistique (NIST SP 260-135), "
             "expression de l'incertitude (NIST TN 1297). La page de synthèse couvre "
             "également les normes ISO/ASTM (échantillonnage, SPC, capabilité)."
         ),
         "en": (
             "Industrial statistical standards and metrology: measurement uncertainty "
-            "(GUM — JCGM 100:2008), statistical metrology (NIST SP 260-135), "
+            "(GUM - JCGM 100:2008), statistical metrology (NIST SP 260-135), "
             "expression of uncertainty (NIST TN 1297). The overview page also covers "
             "ISO/ASTM standards (sampling, SPC, capability)."
         ),

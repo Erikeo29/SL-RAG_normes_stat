@@ -113,7 +113,7 @@ def render_matrix_page():
         reqs = REQUIREMENTS.get(norme, [])
         st.session_state["matrix_data"] = _get_empty_matrix(reqs)
 
-    st.subheader(f"{t('matrix_requirements_for')} — {norme}")
+    st.subheader(f"{t('matrix_requirements_for')} - {norme}")
 
     if st.session_state["matrix_data"].empty:
         st.info(t("matrix_add_rows_hint"))
@@ -187,7 +187,7 @@ def render_matrix_page():
                 similarity = max(0, 1 - chunk.get("distance", 1))
                 st.markdown(
                     f'<div class="source-card">'
-                    f"<strong>{chunk['source']}</strong> — "
+                    f"<strong>{chunk['source']}</strong> - "
                     f"{t('sources_page')} {chunk['page'] + 1} "
                     f"({t('sources_relevance')} : {similarity:.0%})<br>"
                     f"{chunk['text'][:500]}"

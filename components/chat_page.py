@@ -76,7 +76,7 @@ def _render_sources(chunks: list[dict]):
             similarity = max(0, 1 - chunk.get("distance", 1))
             st.markdown(
                 f'<div class="source-card">'
-                f"<strong>[{i}] {chunk['source']}</strong> — "
+                f"<strong>[{i}] {chunk['source']}</strong> - "
                 f"{t('sources_page')} {chunk['page'] + 1} "
                 f"({t('sources_relevance')} : {similarity:.0%})<br>"
                 f"<em>{(chunk.get('text') or '')[:200]}...</em>"

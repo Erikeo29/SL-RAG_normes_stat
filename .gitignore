@@ -4,6 +4,8 @@ __pycache__/
 .venv/
 .streamlit/secrets.toml
 .plugin-config/
+CLAUDE.md
+.claude/
 *.egg-info/
 dist/
 build/

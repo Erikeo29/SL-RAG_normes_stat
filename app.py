@@ -1,4 +1,4 @@
-"""RAG normes statistiques — Point d'entree Streamlit."""
+"""RAG normes statistiques - Point d'entree Streamlit."""
 import os
 
 import streamlit as st

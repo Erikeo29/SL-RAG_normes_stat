@@ -61,7 +61,7 @@ def stream_rag_response(
     tuple[str, list[dict]]
         (text_chunk, source_chunks) -- les sources sont renvoyees avec le dernier chunk.
     """
-    # 1. Retrieval — bilingual query (embedding model is EN-centric)
+    # 1. Retrieval - bilingual query (embedding model is EN-centric)
     client = get_groq_client()
     en_query = _translate_query_to_en(user_message, client)
     queries = [user_message]
