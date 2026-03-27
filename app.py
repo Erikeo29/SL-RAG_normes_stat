@@ -2,6 +2,7 @@
 import os
 
 import streamlit as st
+import streamlit.components.v1 as components
 import streamlit_authenticator as stauth
 import yaml
 from yaml.loader import SafeLoader
@@ -91,6 +92,14 @@ render_sidebar()
 
 # --- Routing ---
 page = st.session_state.current_page
+
+# --- Auto-scroll to top on page change ---
+if st.session_state.get("_last_page") != page:
+    st.session_state["_last_page"] = page
+    components.html(
+        '<script>window.parent.document.querySelector("section.main").scrollTo(0, 0);</script>',
+        height=0,
+    )
 
 if page == "chat":
     render_chat_page()
