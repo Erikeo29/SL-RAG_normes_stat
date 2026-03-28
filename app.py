@@ -93,24 +93,6 @@ render_sidebar()
 # --- Routing ---
 page = st.session_state.current_page
 
-# --- Auto-scroll to top on page change ---
-if st.session_state.get("_last_page") != page:
-    st.session_state["_last_page"] = page
-    components.html(
-        (
-            '<script>'
-            'function scrollTop(){'
-            'var e=window.parent.document;'
-            'var targets=["section.main","[data-testid=stAppViewContainer]",".main"];'
-            'targets.forEach(function(s){var el=e.querySelector(s);if(el)el.scrollTo(0,0);});'
-            'e.scrollingElement.scrollTo(0,0);'
-            '}'
-            'scrollTop();setTimeout(scrollTop,100);setTimeout(scrollTop,300);'
-            '</script>'
-        ),
-        height=0,
-    )
-
 if page == "chat":
     render_chat_page()
 elif page == "upload":
