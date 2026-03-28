@@ -18,7 +18,12 @@ def render_about_page():
 
 
 def _render_fr(stats: dict):
-    st.header("À propos")
+    st.markdown(f"""
+    <div class="hero-banner">
+        <h1>{t("app_title")}</h1>
+        <p>{t("hero_subtitle")}</p>
+    </div>
+    """, unsafe_allow_html=True)
 
     st.subheader("Objectif")
     st.markdown(
@@ -97,7 +102,12 @@ def _render_fr(stats: dict):
 
 
 def _render_en(stats: dict):
-    st.header("About")
+    st.markdown(f"""
+    <div class="hero-banner">
+        <h1>{t("app_title")}</h1>
+        <p>{t("hero_subtitle")}</p>
+    </div>
+    """, unsafe_allow_html=True)
 
     st.subheader("Purpose")
     st.markdown(

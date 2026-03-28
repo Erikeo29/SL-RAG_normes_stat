@@ -11,6 +11,10 @@ TRANSLATIONS: dict[str, dict[str, str]] = {
         "fr": "Assistant intelligent pour l'analyse de normes statistiques",
         "en": "Intelligent assistant for statistical standards analysis",
     },
+    "hero_subtitle": {
+        "fr": "Assistant RAG pour les normes statistiques, incertitudes de mesure et métrologie - GUM, ISO, ASTM",
+        "en": "RAG assistant for statistical standards, measurement uncertainty and metrology - GUM, ISO, ASTM",
+    },
     # --- Sidebar ---
     "sidebar_title": {
         "fr": "Navigation",
